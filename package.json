@@ -27,14 +27,16 @@
       "target": [
         { "target": "nsis", "arch": ["x64"] },
         { "target": "portable", "arch": ["x64"] }
-      ],
-      "artifactName": "KlipStudyo-${version}-${os}-${arch}-${target}.${ext}"
+      ]
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
-      "language": "1055"
+      "artifactName": "KlipStudyo-Kurulum-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "KlipStudyo-Tasinabilir-${version}.${ext}"
     },
     "mac": {
       "target": [{ "target": "dmg", "arch": ["x64", "arm64"] }],
