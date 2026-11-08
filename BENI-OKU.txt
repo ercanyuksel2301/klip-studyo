@@ -1,0 +1,29 @@
+KLİP STÜDYO - MASAÜSTÜ UYGULAMASI
+=================================
+
+A) KENDİ BİLGİSAYARINIZDA HIZLICA DENEMEK
+   Windows: Baslat.bat'a çift tıklayın.   Mac/Linux: ./baslat.sh
+   (Node.js gerekir: https://nodejs.org  -> LTS)
+
+B) BAŞKA BİLGİSAYARLAR İÇİN KURULUM DOSYASI ÜRETMEK (Node.js sadece sizde gerekir)
+   Windows'ta:  Kurulum-Dosyasi-Uret-Windows.bat'a çift tıklayın.
+     dist klasöründe iki dosya çıkar:
+       *-nsis.exe     -> Kurulum sihirbazı (başlat menüsü + masaüstü kısayolu)
+       *-portable.exe -> Kurulum gerektirmez, USB'ye atıp çift tıklayarak çalışır
+   Mac'te:   ./kurulum-dosyasi-uret.sh  -> dist içinde .dmg
+   Linux'ta: ./kurulum-dosyasi-uret.sh  -> dist içinde .AppImage
+
+C) HER ÜÇ SİSTEM İÇİN BULUTTA OTOMATİK ÜRETMEK (Mac'iniz yoksa en kolayı)
+   1. github.com'da ücretsiz hesap açın, yeni bir "private" depo oluşturun.
+   2. Bu klasörün içindekileri (gizli .github klasörü dahil) depoya yükleyin.
+   3. Depoda Actions -> "Kurulum dosyalarini uret" -> Run workflow.
+   4. 5-10 dakika sonra çalışma sayfasının altındaki "Artifacts" bölümünden
+      Windows, Mac ve Linux dosyalarını indirin.
+
+KURULUM / AÇILIŞ NOTLARI (diğer bilgisayarlarda)
+   - Windows: "Windows bilgisayarınızı korudu" uyarısı çıkarsa
+     "Ek bilgi" -> "Yine de çalıştır" deyin (uygulama imzasız olduğu için).
+   - Mac: Uygulamaya sağ tık -> Aç deyin (ilk açılışta bir kere).
+   - Linux: AppImage'e sağ tık -> Özellikler -> "Çalıştırılabilir" işaretleyin.
+   - Hedef bilgisayarda Node.js, Python vb. hiçbir şey kurmanıza gerek yoktur.
+   - Yazı tipleri için ilk kullanımda internet gerekir.

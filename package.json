@@ -1,0 +1,49 @@
+{
+  "name": "klip-studyo",
+  "productName": "Klip Stüdyo",
+  "version": "1.0.0",
+  "description": "Klip Stüdyo masaüstü uygulaması",
+  "author": "Baykutay",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.baykutay.klipstudyo",
+    "productName": "Klip Stüdyo",
+    "compression": "maximum",
+    "electronLanguages": ["tr", "en-US"],
+    "files": ["main.js", "app/**/*"],
+    "directories": { "output": "dist" },
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "artifactName": "KlipStudyo-${version}-${os}-${arch}-${target}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "language": "1055"
+    },
+    "mac": {
+      "target": [{ "target": "dmg", "arch": ["x64", "arm64"] }],
+      "artifactName": "KlipStudyo-${version}-mac-${arch}.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "AudioVideo",
+      "artifactName": "KlipStudyo-${version}-linux-${arch}.${ext}"
+    }
+  }
+}
