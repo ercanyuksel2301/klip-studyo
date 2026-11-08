@@ -1,0 +1,6 @@
+{
+  "appId": "com.baykutay.klipstudyo",
+  "appName": "Klip Stüdyo",
+  "webDir": "www",
+  "server": { "androidScheme": "https" }
+}

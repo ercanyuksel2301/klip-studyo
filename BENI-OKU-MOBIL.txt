@@ -1,0 +1,7 @@
+KLİP STÜDYO - ANDROID (APK)
+1) GitHub'daki klip-studyo deposuna bu zip'teki "mobile" klasörünü yükleyin.
+2) Add file > Create new file ile ".github/workflows/android.yml" oluşturup
+   bu zip'teki android.yml içeriğini yapıştırın, Commit changes deyin.
+3) Actions > "Android APK uret" > Run workflow. 5-8 dk sonra Artifacts'tan
+   KlipStudyo-Android-APK zip'ini indirin, içindeki .apk dosyası kurulum dosyasıdır.
+4) APK'yı telefona atın, açın; "Bilinmeyen kaynaklardan yükle" iznini verin.

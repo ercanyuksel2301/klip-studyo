@@ -1,0 +1,16 @@
+package com.baykutay.klipstudyo;
+
+import android.os.Bundle;
+import android.view.WindowManager;
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Ekran, video dışa aktarılırken kapanmasın
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // Müzik/video kullanıcı dokunuşu beklemeden oynatılabilsin
+        getBridge().getWebView().getSettings().setMediaPlaybackRequiresUserGesture(false);
+    }
+}
